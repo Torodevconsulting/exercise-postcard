@@ -1,26 +1,25 @@
 * {
-	/*border: 1px dashed red;*/
+	border: 1px dashed red;
 	min-height: 10px;
 }
 
 body {
-	font-family: "Roboto", sans-serif;
+	font-family: "Arial", sans-serif;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: #3f5efb;
-	background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+	min-height: 100vh;
+	padding: 5px;
+	background: linear-gradient(135deg, #4c5372 0%, #483858 100%);
 }
 
-p {
+.body-left p:first-child {
 	margin-top: 0;
-	font-size: small;
 }
 
 .body-left,
 .body-right {
 	padding: 5px;
-	width: 50%;
 }
 
 input {
@@ -28,31 +27,13 @@ input {
 	border-bottom: gray;
 }
 
-input,
-textarea {
-	border: none;
-	border-bottom: 2px solid #ddd;
-	padding: 12px 0;
-	font-size: 13px;
-	background: transparent;
-	outline: none;
-	transition: border-color 0.3s;
-	font-family: "Arial", sans-serif;
-	width: 100%;
-	resize: none;
-}
-
-input:focus,
-textarea:focus {
-	border-bottom-color: #667eea;
-}
-
 button {
-	width: 30%;
-	padding: 8px;
+	width: 50%;
+	padding: 5px;
 	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 	border: none;
-	font-size: 12px;
+	padding: 14px 40px;
+	font-size: 16px;
 	font-weight: bold;
 	border-radius: 6px;
 	cursor: pointer;
@@ -60,28 +41,18 @@ button {
 	color: white;
 }
 
-button:hover {
-	transform: translateY(-2px);
-	box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-}
-
-button:active {
-	transform: translateY(0);
-}
-
 .postcard {
 	background: white;
 	color: black;
 	width: 100%;
 	max-width: 500px;
-	max-height: 500px;
 	margin: auto;
 	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 	border-radius: 12px;
 }
 
 .postcard-header {
-	padding: 10px;
+	padding: 30px;
 	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 	display: flex;
 	max-height: 50px;
@@ -97,7 +68,6 @@ button:active {
 
 .postcard-body {
 	display: flex;
-	align-items: center;
 }
 
 #headerContainer {
@@ -110,10 +80,6 @@ button:active {
 
 .titleContainer {
 	flex-grow: 2;
-}
-
-.titleContainer h1 {
-	color: whitesmoke;
 }
 
 .postcard-header img {
@@ -130,7 +96,12 @@ button:active {
 	text-align: center;
 }
 
+.body-left,
+.body-right,
+.postcard-footer {
+	padding: 25px;
+}
+
 .postcard-footer {
 	justify-content: center;
-	padding: 5px;
 }
